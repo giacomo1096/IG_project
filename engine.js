@@ -56,7 +56,6 @@ var take_carrot9 = 0;
 
 var carrot_motion = 0;
 var carrot_change = false;
-var carrot_sound = new BABYLON.Sound("Carrot_sound", "sounds/carrot_sound.wav", scene, null, {volume: 0.4});
 
 
 //GAME SCENE
@@ -75,6 +74,7 @@ var gameScene = function () {
     scene.useClonedMeshMap = true;
 
     // musica TODO
+    var carrot_sound = new BABYLON.Sound("Carrot_sound", "sounds/carrot_sound.wav", scene, null, {volume: 0.4});
       // Load the sound and play it automatically once ready
       var music = new BABYLON.Sound("Game", "sounds/smasbonus.wav", scene, null, {
         loop: true,
