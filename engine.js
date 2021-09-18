@@ -2828,7 +2828,7 @@ var gameScene = function () {
             dummy_skeleton.bones[59].rotate(BABYLON.Axis.X, 0.001, BABYLON.Space.LOCAL);  //right foot
             dummy_skeleton.bones[64].rotate(BABYLON.Axis.X, -0.001, BABYLON.Space.LOCAL); //left foot
 
-            leg_opening = leg_opening + 0.2;
+            leg_opening = leg_opening + 0.4;
 
         }
 
@@ -2853,7 +2853,7 @@ var gameScene = function () {
             dummy_skeleton.bones[59].rotate(BABYLON.Axis.X, -0.001, BABYLON.Space.LOCAL); //right foot         
             dummy_skeleton.bones[64].rotate(BABYLON.Axis.X, 0.001, BABYLON.Space.LOCAL);  //left foot
             
-            leg_opening = leg_opening - 0.2;
+            leg_opening = leg_opening - 0.4;
 
         }
 
@@ -2886,7 +2886,7 @@ var gameScene = function () {
             dummy_skeleton.bones[59].rotate(BABYLON.Axis.X, 0.001, BABYLON.Space.LOCAL);  //right foot
             dummy_skeleton.bones[64].rotate(BABYLON.Axis.X, -0.001, BABYLON.Space.LOCAL); //left foot
 
-            leg_opening = leg_opening + 0.2;
+            leg_opening = leg_opening + 0.4;
 
         }
 
@@ -2911,7 +2911,7 @@ var gameScene = function () {
             dummy_skeleton.bones[59].rotate(BABYLON.Axis.X, -0.001, BABYLON.Space.LOCAL); //right foot         
             dummy_skeleton.bones[64].rotate(BABYLON.Axis.X, 0.001, BABYLON.Space.LOCAL);  //left foot
             
-            leg_opening = leg_opening - 0.2;
+            leg_opening = leg_opening - 0.4;
 
         }
 
