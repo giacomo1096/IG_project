@@ -3129,6 +3129,7 @@ var gameScene = function () {
 
         if(dummyBox.intersectsMesh(carrot2, true, false) ){
             if(take_carrot2 == 0){
+                carrot_sound.play();
                 carrot2.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3139,6 +3140,7 @@ var gameScene = function () {
 
         if( dummyBox.intersectsMesh(carrot3, true, false) ){
             if(take_carrot3 == 0){
+                carrot_sound.play();
                 carrot3.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3149,6 +3151,7 @@ var gameScene = function () {
 
         if( dummyBox.intersectsMesh(carrot4, true, false) ){
             if(take_carrot4 == 0){
+                carrot_sound.play();
                 carrot4.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3159,6 +3162,7 @@ var gameScene = function () {
 
         if( dummyBox.intersectsMesh(carrot5, true, false) ){
             if(take_carrot5 == 0){
+                carrot_sound.play();
                 carrot5.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3170,6 +3174,7 @@ var gameScene = function () {
         if(difficulty == 1 || difficulty == 2){
             if( dummyBox.intersectsMesh(carrot6, true, false) ){
                 if(take_carrot6 == 0){
+                    carrot_sound.play();
                     carrot6.dispose();
                     carrots_taken++;
                     num_carrots--;
@@ -3180,6 +3185,7 @@ var gameScene = function () {
 
             if( dummyBox.intersectsMesh(carrot7, true, false) ){
                 if(take_carrot7 == 0){
+                    carrot_sound.play();
                     carrot7.dispose();
                     carrots_taken++;
                     num_carrots--;
@@ -3190,6 +3196,7 @@ var gameScene = function () {
 
             if( dummyBox.intersectsMesh(carrot8, true, false) ){
                 if(take_carrot8 == 0){
+                    carrot_sound.play();
                     carrot8.dispose();
                     carrots_taken++;
                     num_carrots--;
@@ -3200,6 +3207,7 @@ var gameScene = function () {
 
             if( dummyBox.intersectsMesh(carrot9, true, false) ){
                 if(take_carrot9 == 0){
+                    carrot_sound.play();
                     carrot9.dispose();
                     carrots_taken++;
                     num_carrots--;
@@ -3223,6 +3231,7 @@ var gameScene = function () {
 
         if( rabbitBox.intersectsMesh(carrot2, true, false) ){
             if(take_carrot2 == 0){
+                carrot_sound.play();
                 carrot2.dispose();
                 rabbit_carrots_taken++;
                 num_carrots--;
@@ -3234,6 +3243,7 @@ var gameScene = function () {
 
         if( rabbitBox.intersectsMesh(carrot3, true, false) ){
             if(take_carrot3 == 0){
+                carrot_sound.play();
                 carrot3.dispose();
                 rabbit_carrots_taken++;
                 num_carrots--;
@@ -3245,6 +3255,7 @@ var gameScene = function () {
 
         if( rabbitBox.intersectsMesh(carrot4, true, false) ){
             if(take_carrot4 == 0){
+                carrot_sound.play();
                 carrot4.dispose();
                 rabbit_carrots_taken++;
                 num_carrots--;
@@ -3256,6 +3267,7 @@ var gameScene = function () {
 
         if( rabbitBox.intersectsMesh(carrot5, true, false) ){
             if(take_carrot5 == 0){
+                carrot_sound.play();
                 carrot5.dispose();
                 rabbit_carrots_taken++;
                 num_carrots--;
@@ -3269,6 +3281,7 @@ var gameScene = function () {
 
             if( rabbitBox.intersectsMesh(carrot6, true, false) ){
                 if(take_carrot6 == 0){
+                    carrot_sound.play();
                     carrot6.dispose();
                     rabbit_carrots_taken++;
                     num_carrots--;
@@ -3280,6 +3293,7 @@ var gameScene = function () {
     
             if( rabbitBox.intersectsMesh(carrot7, true, false) ){
                 if(take_carrot7 == 0){
+                    carrot_sound.play();
                     carrot7.dispose();
                     rabbit_carrots_taken++;
                     num_carrots--;
@@ -3291,6 +3305,7 @@ var gameScene = function () {
     
             if( rabbitBox.intersectsMesh(carrot8, true, false) ){
                 if(take_carrot8 == 0){
+                    carrot_sound.play();
                     carrot8.dispose();
                     rabbit_carrots_taken++;
                     num_carrots--;
@@ -3302,6 +3317,7 @@ var gameScene = function () {
 
             if( rabbitBox.intersectsMesh(carrot9, true, false) ){
                 if(take_carrot9 == 0){
+                    carrot_sound.play();
                     carrot9.dispose();
                     rabbit_carrots_taken++;
                     num_carrots--;
