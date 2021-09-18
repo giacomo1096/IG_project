@@ -3512,7 +3512,7 @@ var menuScene = function () {
 
     var panel = new BABYLON.GUI.StackPanel();
         panel.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
-        panel.width = "50%";
+        panel.width = "20%";
         panel.paddingTop = "33%";
         panel.paddingBottom = "-25.5%";
         panel.paddingRight = "38%";
