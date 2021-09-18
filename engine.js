@@ -56,7 +56,7 @@ var take_carrot9 = 0;
 
 var carrot_motion = 0;
 var carrot_change = false;
-var carrot_sound;
+var carrot_sound = new BABYLON.Sound("Carrot_sound", "sounds/carrot_sound.wav", scene, null, {volume: 0.4});
 
 
 //GAME SCENE
@@ -3118,10 +3118,7 @@ var gameScene = function () {
 
        if(dummyBox.intersectsMesh(carrot1, true, false) ){
             if(take_carrot1 == 0){
-                carrot_sound = new BABYLON.Sound("Carrot_sound", "sounds/carrot_sound.wav", scene, null, {
-                    autoplay: true,
-                    volume: 0.4
-                });
+                carrot_sound.play();
                 carrot1.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3214,10 +3211,7 @@ var gameScene = function () {
 
         if( rabbitBox.intersectsMesh(carrot1, true, false) ){
             if(take_carrot1 == 0){
-                carrot_sound = new BABYLON.Sound("Carrot_sound", "sounds/carrot_sound.wav", scene, null, {
-                    autoplay: true,
-                    volume: 0.4
-                });
+                carrot_sound.play();
                 carrot1.dispose();
                 rabbit_carrots_taken++;
                 num_carrots--;
