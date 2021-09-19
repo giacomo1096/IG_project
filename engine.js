@@ -57,6 +57,7 @@ var take_carrot9 = 0;
 var carrot_motion = 0;
 var carrot_change = false;
 var carrot_sound;
+var carrot_sound_dummy;
 
 //GAME SCENE
 var gameScene = function () {
@@ -75,6 +76,7 @@ var gameScene = function () {
 
     // musica TODO
      carrot_sound = new BABYLON.Sound("Carrot_sound", "sounds/carrot_sound.wav", scene, null, {volume: 0.4});
+     carrot_sound_dummy = new BABYLON.Sound("Dummy_sound", "sounds/carrot_sound_dummy.wav", scene, null, {volume: 0.4});
       // Load the sound and play it automatically once ready
       var music = new BABYLON.Sound("Game", "sounds/smasbonus.wav", scene, null, {
         loop: true,
@@ -3118,7 +3120,7 @@ var gameScene = function () {
 
        if(dummyBox.intersectsMesh(carrot1, true, false) ){
             if(take_carrot1 == 0){
-                carrot_sound.play();
+                carrot_sound_dummy.play();
                 carrot1.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3129,7 +3131,7 @@ var gameScene = function () {
 
         if(dummyBox.intersectsMesh(carrot2, true, false) ){
             if(take_carrot2 == 0){
-                carrot_sound.play();
+                carrot_sound_dummy.play();
                 carrot2.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3140,7 +3142,7 @@ var gameScene = function () {
 
         if( dummyBox.intersectsMesh(carrot3, true, false) ){
             if(take_carrot3 == 0){
-                carrot_sound.play();
+                carrot_sound_dummy.play();
                 carrot3.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3151,7 +3153,7 @@ var gameScene = function () {
 
         if( dummyBox.intersectsMesh(carrot4, true, false) ){
             if(take_carrot4 == 0){
-                carrot_sound.play();
+                carrot_sound_dummy.play();
                 carrot4.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3162,7 +3164,7 @@ var gameScene = function () {
 
         if( dummyBox.intersectsMesh(carrot5, true, false) ){
             if(take_carrot5 == 0){
-                carrot_sound.play();
+                carrot_sound_dummy.play();
                 carrot5.dispose();
                 carrots_taken++;
                 num_carrots--;
@@ -3174,7 +3176,7 @@ var gameScene = function () {
         if(difficulty == 1 || difficulty == 2){
             if( dummyBox.intersectsMesh(carrot6, true, false) ){
                 if(take_carrot6 == 0){
-                    carrot_sound.play();
+                    carrot_sound_dummy.play();
                     carrot6.dispose();
                     carrots_taken++;
                     num_carrots--;
@@ -3185,7 +3187,7 @@ var gameScene = function () {
 
             if( dummyBox.intersectsMesh(carrot7, true, false) ){
                 if(take_carrot7 == 0){
-                    carrot_sound.play();
+                    carrot_sound_dummy.play();
                     carrot7.dispose();
                     carrots_taken++;
                     num_carrots--;
@@ -3196,7 +3198,7 @@ var gameScene = function () {
 
             if( dummyBox.intersectsMesh(carrot8, true, false) ){
                 if(take_carrot8 == 0){
-                    carrot_sound.play();
+                    carrot_sound_dummy.play();
                     carrot8.dispose();
                     carrots_taken++;
                     num_carrots--;
@@ -3207,7 +3209,7 @@ var gameScene = function () {
 
             if( dummyBox.intersectsMesh(carrot9, true, false) ){
                 if(take_carrot9 == 0){
-                    carrot_sound.play();
+                    carrot_sound_dummy.play();
                     carrot9.dispose();
                     carrots_taken++;
                     num_carrots--;
