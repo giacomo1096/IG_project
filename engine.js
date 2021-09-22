@@ -24,10 +24,6 @@ var from_final = 0;
 var from_instruction = 0;
 
 var jump = 0;
-var walkStepsCounter = 0;
-var change = false;
-var walkBackStepsCounter = 0; //credo non serva
-var change_back = false;
 var feet_opening = 0;
 var change_rabbit = false;
 
@@ -3783,10 +3779,6 @@ var finalScene = function (){
 
     restartBtn.onPointerUpObservable.addOnce(function () {
         jump=0;
-        walkStepsCounter = 0;
-        walkBackStepsCounter = 0;
-        change = false;
-        change_back = false;
         feet_opening = 0;
         change_rabbit = false;
 
@@ -3829,10 +3821,6 @@ var finalScene = function (){
 
     MenuBtn.onPointerUpObservable.addOnce(function () {
         jump=0;
-        walkStepsCounter = 0;
-        walkBackStepsCounter = 0;
-        change = false;
-        change_back = false;
         feet_opening = 0;
         change_rabbit = false;
         num_carrots = 5;
