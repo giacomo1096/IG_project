@@ -2880,7 +2880,7 @@ var gameScene = function () {
     var rabbit, rabbit_skeleton;
     var r_box;
     var rabbitBox = BABYLON.MeshBuilder.CreateBox("rabbitBox",{ height: 8, width: 7, depth: 7 }, scene);
-    rabbitBox.position.y = 5;
+    rabbitBox.position.y = 15;
     rabbitBox.position.z = -30;
 
     var rabbitBox_mat = new BABYLON.StandardMaterial("rabbitBox_mat", scene);
