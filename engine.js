@@ -2926,28 +2926,35 @@ var gameScene = function () {
     var animationRabbit = function(rabbit_mesh, speed){
 
         if(rabbitBox.intersectsMesh(fence5, true, false)){
-            rabbit_mesh.translate(BABYLON.Axis.Y, +3.5, BABYLON.Space.LOCAL);
+            rabbit_mesh.translate(BABYLON.Axis.Y, +6.0, BABYLON.Space.LOCAL);
         }
         if(rabbitBox.intersectsMesh(fence6, true, false)){
-            rabbit_mesh.translate(BABYLON.Axis.Y, +3.5, BABYLON.Space.LOCAL);
+            rabbit_mesh.translate(BABYLON.Axis.Y, +6.0, BABYLON.Space.LOCAL);
+
         }
         if(rabbitBox.intersectsMesh(fence7, true, false)){
-            rabbit_mesh.translate(BABYLON.Axis.Y, +3.5, BABYLON.Space.LOCAL);
+            rabbit_mesh.translate(BABYLON.Axis.Y, +6.0, BABYLON.Space.LOCAL);
+
         }
         if(rabbitBox.intersectsMesh(fence8, true, false)){
-            rabbit_mesh.translate(BABYLON.Axis.Y, +3.5, BABYLON.Space.LOCAL);
+            rabbit_mesh.translate(BABYLON.Axis.Y, +6.0, BABYLON.Space.LOCAL);
+
         }
         if(rabbitBox.intersectsMesh(fence9, true, false)){
-            rabbit_mesh.translate(BABYLON.Axis.Y, +3.5, BABYLON.Space.LOCAL);
+            rabbit_mesh.translate(BABYLON.Axis.Y, +6.0, BABYLON.Space.LOCAL);
+
         }
         if(rabbitBox.intersectsMesh(fence10, true, false)){
-            rabbit_mesh.translate(BABYLON.Axis.Y, +3.5, BABYLON.Space.LOCAL);
+            rabbit_mesh.translate(BABYLON.Axis.Y, +6.0, BABYLON.Space.LOCAL);
+
         }
         if(rabbitBox.intersectsMesh(fence11, true, false)){
-            rabbit_mesh.translate(BABYLON.Axis.Y, +3.5, BABYLON.Space.LOCAL);
+            rabbit_mesh.translate(BABYLON.Axis.Y, +6.0, BABYLON.Space.LOCAL);
+
         }
         if(rabbitBox.intersectsMesh(fence12, true, false)){
-            rabbit_mesh.translate(BABYLON.Axis.Y, +3.5, BABYLON.Space.LOCAL);
+            rabbit_mesh.translate(BABYLON.Axis.Y, +6.0, BABYLON.Space.LOCAL);
+
         }
 
         //default difficulty = easy
