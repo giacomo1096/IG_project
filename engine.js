@@ -2883,8 +2883,8 @@ var gameScene = function () {
     //RABBIT
     var rabbit, rabbit_skeleton;
     var r_box;
-    var rabbitBox = BABYLON.MeshBuilder.CreateBox("rabbitBox",{ height: 7.5, width: 10, depth: 10 }, scene);
-    rabbitBox.position.y = 3.5;
+    var rabbitBox = BABYLON.MeshBuilder.CreateBox("rabbitBox",{ height: 8, width: 7, depth: 7 }, scene);
+    rabbitBox.position.y = 4;
     rabbitBox.position.z = -30;
 
     var rabbitBox_mat = new BABYLON.StandardMaterial("rabbitBox_mat", scene);
@@ -2895,7 +2895,7 @@ var gameScene = function () {
 
         rabbit = meshes[0];
         rabbit.scaling.scaleInPlace(0.2);
-        rabbit.position.y = -3.5;
+        rabbit.position.y = -4;
     
         shadowGenerator.addShadowCaster(rabbit);
     
@@ -3699,37 +3699,37 @@ var finalScene = function (){
 
     var music;
 
-    var guiWin = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("WinningUI");
+    var guiFinal = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("WinningUI");
 
     var imageWin = new BABYLON.GUI.Image("imagewin", "textures/menu/background.jpg");
     imageWin.height = "100%";
-	guiWin.addControl(imageWin);
+	guiFinal.addControl(imageWin);
 
-    var win = new BABYLON.GUI.TextBlock("Win",); 
-    win.color = "Black";
-    win.fontFamily = "My Font";
-    win.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
-    win.textVerticalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
-    win.fontSize = "100px";
-    //win.paddingLeft = "-32px";
-    //win.paddingRight = "32px";
-    win.paddingTop = "5px";
-    win.paddingBottom = "-5px";
-    win.resizeToFit = true;
+    var final_text = new BABYLON.GUI.TextBlock("final_text",); 
+    final_text.color = "Black";
+    final_text.fontFamily = "My Font";
+    final_text.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
+    final_text.textVerticalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
+    final_text.fontSize = "100px";
+    //final_text.paddingLeft = "-32px";
+    //final_text.paddingRight = "32px";
+    final_text.paddingTop = "5px";
+    final_text.paddingBottom = "-5px";
+    final_text.resizeToFit = true;
 
     if(bool_win){ 
         music = new BABYLON.Sound("Win", "sounds/congratulation.wav", scene, null, {
             autoplay: true,
             volume: 0.3
         });
-        win.text = "Congratulations! \n You're the fastest!"
+        final_text.text = "Congratulations! \n You're the fastest!"
     }
     else{
         music = new BABYLON.Sound("Win", "sounds/gameover.wav", scene, null, {
             autoplay: true,
             volume: 0.3
         });
-        win.text = "Ops... too slow!"}
+        final_text.text = "Ops... too slow!"}
 
     var rect1 = new BABYLON.GUI.Rectangle();
     rect1.width = "70%";
@@ -3776,10 +3776,10 @@ var finalScene = function (){
     //rect1.addControl(MenuBtn);
 
 
-    guiWin.addControl(rect1);
-    guiWin.addControl(restartBtn);
-    guiWin.addControl(MenuBtn);
-    guiWin.addControl(win);
+    guiFinal.addControl(rect1);
+    guiFinal.addControl(restartBtn);
+    guiFinal.addControl(MenuBtn);
+    guiFinal.addControl(final_text);
 
     restartBtn.onPointerUpObservable.addOnce(function () {
         jump=0;
