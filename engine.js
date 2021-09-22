@@ -3837,7 +3837,7 @@ var finalScene = function (){
          boolimagenight = true;
 
 
-        // Check if the first time call the function FOREST_Scene
+        
         menu = menuScene(); 
         change_scene = 0;  
         from_final = 1; 
