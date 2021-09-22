@@ -216,7 +216,7 @@ var gameScene = function () {
         dir_light.intensity = 0.9; //sun
         hemisph_light.intensity = 1.0;
     }else{
-        dir_light.intensity = 0.3; //moon
+        dir_light.intensity = 0.3; //moon 
         hemisph_light.intensity = 0.2;
     }
 
@@ -232,7 +232,7 @@ var gameScene = function () {
     ground_mat.specularTexture = new BABYLON.Texture("textures/ground.jpg", scene);
 
     ground.material = ground_mat;
-    ground.physicsImpostor = new BABYLON.PhysicsImpostor(ground, BABYLON.PhysicsImpostor.BoxImpostor, {mass: 10000, restitution: 0.9}, scene);
+    ground.physicsImpostor = new BABYLON.PhysicsImpostor(ground, BABYLON.PhysicsImpostor.BoxImpostor, {mass: 0, restitution: 0.9}, scene);
     ground.checkCollisions = true;
     ground.receiveShadows = true;
 
@@ -2880,7 +2880,7 @@ var gameScene = function () {
     var rabbit, rabbit_skeleton;
     var r_box;
     var rabbitBox = BABYLON.MeshBuilder.CreateBox("rabbitBox",{ height: 8, width: 7, depth: 7 }, scene);
-    rabbitBox.position.y = 3.5;
+    rabbitBox.position.y = 5;
     rabbitBox.position.z = -30;
 
     var rabbitBox_mat = new BABYLON.StandardMaterial("rabbitBox_mat", scene);
@@ -2891,7 +2891,7 @@ var gameScene = function () {
 
         rabbit = meshes[0];
         rabbit.scaling.scaleInPlace(0.2);
-        rabbit.position.y = -3.5;
+        rabbit.position.y = -4;
     
         shadowGenerator.addShadowCaster(rabbit);
     
