@@ -20,7 +20,7 @@ var difficulty = 0; //default easy
 var bool_win = 0;
 var change_scene = 0;
 var from_menu = 0;
-var from_win = 0;
+var from_final = 0;
 var from_instruction = 0;
 
 var jump = 0;
@@ -3814,7 +3814,7 @@ var finalScene = function (){
         //load = LOADING_Scene();
         game = gameScene(); 
         change_scene = 1;   
-        from_win = 1;
+        from_final = 1;
     });
 
     restartBtn.onPointerMoveObservable.add(function(){
@@ -3861,7 +3861,7 @@ var finalScene = function (){
         // Check if the first time call the function FOREST_Scene
         menu = menuScene(); 
         change_scene = 0;  
-        from_win = 1; 
+        from_final = 1; 
     });
 
     MenuBtn.onPointerMoveObservable.add(function(){
@@ -3938,9 +3938,9 @@ engine.runRenderLoop(function () {
             engine.hideLoadingUI();
             menu.render();
 
-            if(from_win == 1){
+            if(from_final == 1){
                 final_scene.dispose();
-                from_win = 0;
+                from_final = 0;
             }
             if(from_instruction == 1){
                 instruction_scene.dispose();
@@ -3960,9 +3960,9 @@ engine.runRenderLoop(function () {
                 menu.dispose();
                 from_menu = 0;
             }
-            if (from_win == 1){
+            if (from_final == 1){
                 final_scene.dispose();
-                from_win = 0;
+                from_final = 0;
             }
         } else{
             load = LOADING_Scene();
