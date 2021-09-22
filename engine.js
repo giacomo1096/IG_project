@@ -2880,7 +2880,7 @@ var gameScene = function () {
     var rabbit, rabbit_skeleton;
     var r_box;
     var rabbitBox = BABYLON.MeshBuilder.CreateBox("rabbitBox",{ height: 8, width: 7, depth: 7 }, scene);
-    rabbitBox.position.y = 4;
+    rabbitBox.position.y = 3.5;
     rabbitBox.position.z = -30;
 
     var rabbitBox_mat = new BABYLON.StandardMaterial("rabbitBox_mat", scene);
@@ -2891,7 +2891,7 @@ var gameScene = function () {
 
         rabbit = meshes[0];
         rabbit.scaling.scaleInPlace(0.2);
-        rabbit.position.y = -4;
+        rabbit.position.y = -3.5;
     
         shadowGenerator.addShadowCaster(rabbit);
     
