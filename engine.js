@@ -264,7 +264,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -290,7 +290,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -316,7 +316,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -342,7 +342,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -368,7 +368,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -394,7 +394,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -420,7 +420,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -446,7 +446,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -472,7 +472,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -499,7 +499,7 @@ var gameScene = function () {
         rock.freezeWorldMatrix();
         //rock.convertToUnIndexedMesh();
         rock.setEnabled(true);
-        rock.showBoundingBox = true;
+        //rock.showBoundingBox = true;
         rock.visibility = 1;
         rock.checkCollisions = true;
         
@@ -521,20 +521,8 @@ var gameScene = function () {
         }
     });
     
+
     //Flower 2
-    BABYLON.SceneLoader.ImportMesh("", "meshes/flower/", "flowers.obj", scene, function(meshes) {
-
-        for (var i = 0; i<12; i ++){
-
-            meshes[i].position.x = 230;
-            meshes[i].position.z = 250;
-            meshes[i].scaling.scaleInPlace(13);
-
-            meshes[i].freezeWorldMatrix();
-        }
-    });
-
-    //Flower 3
     BABYLON.SceneLoader.ImportMesh("", "meshes/flower/", "flowers.obj", scene, function(meshes) {
 
         for (var i = 0; i<12; i ++){
@@ -890,7 +878,7 @@ var gameScene = function () {
         log0.freezeWorldMatrix();
         //log0.convertToUnIndexedMesh();
         log0.setEnabled(true);
-        log0.showBoundingBox = true;
+        //log0.showBoundingBox = true;
         log0.visibility = 1;
         log0.checkCollisions = true;
 
@@ -901,7 +889,7 @@ var gameScene = function () {
         log1.freezeWorldMatrix();
         //log1.convertToUnIndexedMesh();
         log1.setEnabled(true);
-        log1.showBoundingBox = true;
+        //log1.showBoundingBox = true;
         log1.visibility = 1;
         log1.checkCollisions = true;
    
@@ -939,7 +927,7 @@ var gameScene = function () {
         log0.freezeWorldMatrix();
         //log0.convertToUnIndexedMesh();
         log0.setEnabled(true);
-        log0.showBoundingBox = true;
+        //log0.showBoundingBox = true;
         log0.visibility = 1;
         log0.checkCollisions = true;
 
@@ -950,7 +938,7 @@ var gameScene = function () {
         log1.freezeWorldMatrix();
         //log1.convertToUnIndexedMesh();
         log1.setEnabled(true);
-        log1.showBoundingBox = true;
+        //log1.showBoundingBox = true;
         log1.visibility = 1;
         log1.checkCollisions = true;
         
@@ -988,7 +976,7 @@ var gameScene = function () {
         log0.freezeWorldMatrix();
         //log0.convertToUnIndexedMesh();
         log0.setEnabled(true);
-        log0.showBoundingBox = true;
+        //log0.showBoundingBox = true;
         log0.visibility = 1;
         log0.checkCollisions = true;
 
@@ -999,7 +987,7 @@ var gameScene = function () {
         log1.freezeWorldMatrix();
         //log1.convertToUnIndexedMesh();
         log1.setEnabled(true);
-        log1.showBoundingBox = true;
+        //log1.showBoundingBox = true;
         log1.visibility = 1;
         log1.checkCollisions = true;
 
@@ -1037,7 +1025,7 @@ var gameScene = function () {
         log0.freezeWorldMatrix();
         //log0.convertToUnIndexedMesh();
         log0.setEnabled(true);
-        log0.showBoundingBox = true;
+        //log0.showBoundingBox = true;
         log0.visibility = 1;
         log0.checkCollisions = true;
 
@@ -1048,7 +1036,7 @@ var gameScene = function () {
         log1.freezeWorldMatrix();
         //log1.convertToUnIndexedMesh();
         log1.setEnabled(true);
-        log1.showBoundingBox = true;
+        //log1.showBoundingBox = true;
         log1.visibility = 1;
         log1.checkCollisions = true;
 
@@ -1384,7 +1372,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1416,7 +1404,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1448,7 +1436,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1480,7 +1468,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1510,7 +1498,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1539,7 +1527,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1569,7 +1557,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1599,7 +1587,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1631,7 +1619,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1663,7 +1651,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1695,7 +1683,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1727,7 +1715,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1759,7 +1747,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1791,7 +1779,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1823,7 +1811,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1855,7 +1843,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1886,7 +1874,7 @@ var gameScene = function () {
         meshes[1].freezeWorldMatrix();
         meshes[1].convertToUnIndexedMesh();
         meshes[1].setEnabled(true);
-        meshes[1].showBoundingBox = true;
+        //meshes[1].showBoundingBox = true;
         meshes[1].visibility = 1;
         meshes[1].checkCollisions = true;
 
@@ -1918,7 +1906,7 @@ var gameScene = function () {
         side1.freezeWorldMatrix();
         side1.convertToUnIndexedMesh();
         side1.setEnabled(true);
-        side1.showBoundingBox = true;
+        //side1.showBoundingBox = true;
         side1.visibility = 1;
         side1.checkCollisions = true;
         side1.material = perimeter_mat;
@@ -1938,7 +1926,7 @@ var gameScene = function () {
         side2.convertToUnIndexedMesh();
         side2.setEnabled(true);
         side2.visibility = 1;
-        side2.showBoundingBox = true;
+        //side2.showBoundingBox = true;
         side2.checkCollisions = true;
         side2.material = perimeter_mat;
         perimeter.push(side2); 
@@ -1956,7 +1944,7 @@ var gameScene = function () {
         side3.freezeWorldMatrix();
         side3.convertToUnIndexedMesh();
         side3.setEnabled(true);
-        side3.showBoundingBox = true;
+        //side3.showBoundingBox = true;
         side3.visibility = 1;
         side3.checkCollisions = true;
         side3.material = perimeter_mat;
@@ -1976,7 +1964,7 @@ var gameScene = function () {
         side4.freezeWorldMatrix();
         side4.convertToUnIndexedMesh();
         side4.setEnabled(true);
-        side4.showBoundingBox = true;
+        //side4.showBoundingBox = true;
         side4.visibility = 1;
         side4.checkCollisions = true;
         side4.material = perimeter_mat;
@@ -1996,7 +1984,7 @@ var gameScene = function () {
         side5.freezeWorldMatrix();
         side5.convertToUnIndexedMesh();
         side5.setEnabled(true);
-        side5.showBoundingBox = true;
+        //side5.showBoundingBox = true;
         side5.visibility = 1;
         side5.checkCollisions = true;
         side5.material = perimeter_mat;
@@ -2016,7 +2004,7 @@ var gameScene = function () {
         side6.freezeWorldMatrix();
         side6.convertToUnIndexedMesh();
         side6.setEnabled(true);
-        side6.showBoundingBox = true;
+        //side6.showBoundingBox = true;
         side6.visibility = 1;
         side6.checkCollisions = true;
         side6.material = perimeter_mat;
@@ -2035,7 +2023,7 @@ var gameScene = function () {
         side7.freezeWorldMatrix();
         side7.convertToUnIndexedMesh();
         side7.setEnabled(true);
-        side7.showBoundingBox = true;
+        //side7.showBoundingBox = true;
         side7.visibility = 1;
         side7.checkCollisions = true;
         side7.material = perimeter_mat;
@@ -2054,7 +2042,7 @@ var gameScene = function () {
         side8.freezeWorldMatrix();
         side8.convertToUnIndexedMesh();
         side8.setEnabled(true);
-        side8.showBoundingBox = true;
+        //side8.showBoundingBox = true;
         side8.visibility = 1;
         side8.checkCollisions = true;
         side8.material = perimeter_mat;
@@ -2073,7 +2061,7 @@ var gameScene = function () {
         side9.freezeWorldMatrix();
         side9.convertToUnIndexedMesh();
         side9.setEnabled(true);
-        side9.showBoundingBox = true;
+        //side9.showBoundingBox = true;
         side9.visibility = 1;
         side9.checkCollisions = true;
         side9.material = perimeter_mat;
@@ -2093,7 +2081,7 @@ var gameScene = function () {
         side10.freezeWorldMatrix();
         side10.convertToUnIndexedMesh();
         side10.setEnabled(true);
-        side10.showBoundingBox = true;
+        //side10.showBoundingBox = true;
         side10.visibility = 1;
         side10.checkCollisions = true;
         side10.material = perimeter_mat;
@@ -2113,7 +2101,7 @@ var gameScene = function () {
         side11.freezeWorldMatrix();
         side11.convertToUnIndexedMesh();
         side11.setEnabled(true);
-        side11.showBoundingBox = true;
+        //side11.showBoundingBox = true;
         side11.visibility = 1;
         side11.checkCollisions = true;
         side11.material = perimeter_mat;
@@ -2133,7 +2121,7 @@ var gameScene = function () {
         side12.freezeWorldMatrix();
         side12.convertToUnIndexedMesh();
         side12.setEnabled(true);
-        side12.showBoundingBox = true;
+        //side12.showBoundingBox = true;
         side12.visibility = 1;
         side12.checkCollisions = true;
         side12.material = perimeter_mat;
@@ -2406,6 +2394,7 @@ var gameScene = function () {
     var boundingBox_tree24_mat = new BABYLON.StandardMaterial("boundingBox_tree24_mat", scene);
         boundingBox_tree24_mat.alpha = 0;
         boundingBox_tree24_mat.material = boundingBox_tree24_mat;
+        boundingBox_tree24.visibility = 0;
 
 
     var tree24 = BABYLON.SceneLoader.ImportMesh("","//www.babylonjs.com/assets/Tree/", "tree.babylon", scene, function (meshes) {
@@ -2436,6 +2425,7 @@ var gameScene = function () {
     var boundingBox_tree25_mat = new BABYLON.StandardMaterial("boundingBox_tree25_mat", scene);
         boundingBox_tree25_mat.alpha = 0;
         boundingBox_tree25_mat.material = boundingBox_tree25_mat;
+        boundingBox_tree25.visibility = 0;
 
     var tree25 = BABYLON.SceneLoader.ImportMesh("","//www.babylonjs.com/assets/Tree/", "tree.babylon", scene, function (meshes) {
         
@@ -2465,6 +2455,7 @@ var gameScene = function () {
     var boundingBox_tree26_mat = new BABYLON.StandardMaterial("boundingBox_tree26_mat", scene);
         boundingBox_tree26_mat.alpha = 0;
         boundingBox_tree26_mat.material = boundingBox_tree26_mat;
+        boundingBox_tree26.visibility = 0;
 
     var tree13 = BABYLON.SceneLoader.ImportMesh("","//www.babylonjs.com/assets/Tree/", "tree.babylon", scene, function (meshes) {
         
@@ -2645,7 +2636,7 @@ var gameScene = function () {
 
         dummy_skeleton = skeletons[0];
         dummy.parent = dummyBox;
-        dummyBox.showBoundingBox = true;
+        //dummyBox.showBoundingBox = true;
         d_box = meshes[1];
 
         dummyBox.physicsImpostor = new BABYLON.PhysicsImpostor(dummyBox, BABYLON.PhysicsImpostor.BoxImpostor, {mass: 60, restitution: 0});
@@ -2880,7 +2871,7 @@ var gameScene = function () {
     var rabbit, rabbit_skeleton;
     var r_box;
     var rabbitBox = BABYLON.MeshBuilder.CreateBox("rabbitBox",{ height: 8, width: 7, depth: 7 }, scene);
-    rabbitBox.position.y = 15;
+    //rabbitBox.position.y = 5;
     rabbitBox.position.z = -30;
 
     var rabbitBox_mat = new BABYLON.StandardMaterial("rabbitBox_mat", scene);
