@@ -2633,7 +2633,7 @@ var gameScene = function () {
         dummy.position.y = -15;
         
         // DUMMY COLOR
-        
+        /*
         var dummy_mat = new BABYLON.StandardMaterial("dummy_mat", scene);
 	    //dummy_mat.ambientColor = new BABYLON.Color3(1, 0, 0);
         //dummy_mat.specularColor = new BABYLON.Color3(1, 0, 0);
@@ -2641,7 +2641,7 @@ var gameScene = function () {
         dummy_mat.diffuseColor = new BABYLON.Color3(1, 0, 0);
 
         dummy.material = dummy_mat;
-        
+        */
         //dummy.scaling = new BABYLON.Vector3(5.0, 5.0, 5.0);
         //dummy.position = new BABYLON.Vector3(0, -3.5, 0.1);
 
