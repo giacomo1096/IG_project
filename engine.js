@@ -9,7 +9,7 @@ var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, {
 //Scenes
 var game;
 var menu;
-var win;
+var final_scene;
 var instruction_scene;
 
 //Variables for the menu scene
@@ -3050,7 +3050,7 @@ var gameScene = function () {
         if(num_carrots == 0){
             if(carrots_taken > rabbit_carrots_taken) {bool_win = 1}
             music.stop();
-            win = winScene();
+            final_scene = finalScene();
             change_scene = 2;
         }
         
@@ -3687,8 +3687,8 @@ var instructionScene = function(){
     return scene;
 }
 
-//Win Scene
-var winScene = function (){
+//Final Scene
+var finalScene = function (){
     var scene = new BABYLON.Scene(engine);
 
     var camera = new BABYLON.ArcRotateCamera("camera1", -Math.PI/4, Math.PI/4, 3, new BABYLON.Vector3(0, 0, 0), scene);
@@ -3925,7 +3925,7 @@ var LOADING_Scene = function(){
 load = LOADING_Scene();
 menu = menuScene();
 
-//var win2 = winScene();
+//var win2 = finalScene();
 
 
 // Register a render loop to repeatedly render the scene
@@ -3939,7 +3939,7 @@ engine.runRenderLoop(function () {
             menu.render();
 
             if(from_win == 1){
-                win.dispose();
+                final_scene.dispose();
                 from_win = 0;
             }
             if(from_instruction == 1){
@@ -3961,7 +3961,7 @@ engine.runRenderLoop(function () {
                 from_menu = 0;
             }
             if (from_win == 1){
-                win.dispose();
+                final_scene.dispose();
                 from_win = 0;
             }
         } else{
@@ -3971,9 +3971,9 @@ engine.runRenderLoop(function () {
         }
    }
    else if (change_scene == 2){
-       if(win.getWaitingItemsCount() == 0){
+       if(final_scene.getWaitingItemsCount() == 0){
            engine.hideLoadingUI();
-           win.render();
+           final_scene.render();
            game.dispose();
        } else {
            engine.displayLoadingUI();
