@@ -2882,14 +2882,14 @@ var gameScene = function () {
 
         rabbit = meshes[0];
         rabbit.scaling.scaleInPlace(0.2);
-        rabbit.position.y = -4;
+        rabbit.position.y = -3.5;
     
         shadowGenerator.addShadowCaster(rabbit);
     
         rabbit_skeleton = skeletons[0];
     
         rabbit.parent = rabbitBox;
-        rabbitBox.showBoundingBox = true;
+       // rabbitBox.showBoundingBox = true;
     
         r_box = meshes[1];
     
@@ -3019,14 +3019,14 @@ var gameScene = function () {
         if(!change_rabbit){
             
             rabbit_skeleton.bones[2].rotate(BABYLON.Axis.Y, 0.05, BABYLON.Space.LOCAL); //right foot
-            rabbit_skeleton.bones[3].rotate(BABYLON.Axis.Y, 0.05, BABYLON.Space.LOCAL); //left foot
+            rabbit_skeleton.bones[3].rotate(BABYLON.Axis.Y, -0.05, BABYLON.Space.LOCAL); //left foot
             
             feet_opening+=2;
 
         }else{
 
             rabbit_skeleton.bones[2].rotate(BABYLON.Axis.Y, -0.05, BABYLON.Space.LOCAL); //right foot
-            rabbit_skeleton.bones[3].rotate(BABYLON.Axis.Y, -0.05, BABYLON.Space.LOCAL); //left foot
+            rabbit_skeleton.bones[3].rotate(BABYLON.Axis.Y, 0.05, BABYLON.Space.LOCAL); //left foot
 
             feet_opening-=2;
         }
