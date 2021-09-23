@@ -3899,11 +3899,7 @@ var LOADING_Scene = function(){
     loadGui.addControl(Loading);
 
   
-    /*
-    scene.registerAfterRender( function () {
-        earth.rotation = new BABYLON.Vector3(0, Math.PI/6, 0);
-    });
-    */
+
 
     return scene;
 }
