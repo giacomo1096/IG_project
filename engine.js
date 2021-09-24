@@ -3439,9 +3439,9 @@ var menuScene = function () {
         panel.paddingRight = "38%";
         panel.paddingLeft = "-38%";
         guiMenu.addControl(panel);
-        
+         
 
-    var addButton = function(text, parent) {
+    var addButton = function(mode, parent) {
 
             var button = new BABYLON.GUI.RadioButton();
             button.width = "30px";
@@ -3452,39 +3452,40 @@ var menuScene = function () {
     
             
             if(difficulty == 0){
-                if (text == "EASY")
+                if (mode == "EASY")
                 button.isChecked = true;
             }
             if(difficulty == 1){
-                if (text == "MEDIUM")
+                if (mode == "MEDIUM")
                 button.isChecked = true;
             }
             if(difficulty == 2){
-                if (text == "HARD")
+                if (mode == "HARD")
                 button.isChecked = true;
             }
     
             button.onIsCheckedChangedObservable.add(function(state) {
                 if (state) {
-                    if (text == "EASY"){
+                    if (mode == "EASY"){
                         difficulty = 0;
                     } 
-                    if (text == "MEDIUM"){
+                    if (mode == "MEDIUM"){
                         difficulty = 1
                     }
-                    if (text == "HARD"){ 
+                    if (mode == "HARD"){ 
                         difficulty = 2
                     }
                 }
             });
             
-        var header = BABYLON.GUI.Control.AddHeader(button, text, "150px", { isHorizontal: true, controlFirst: true });
+        var header = BABYLON.GUI.Control.AddHeader(button, mode, "150px", { isHorizontal: true, controlFirst: true });
         header.height = "70px";
-        header.children[1].fontSize = 25;
-        header.children[1].fontFamily = "My Font";
-        header.children[1].color = "black";
-        header.children[1].alpha = 0.8;
         header.children[1].width ="180px";
+        header.children[1].color = "black";
+        header.children[1].fontFamily = "My Font";
+        header.children[1].fontSize = 25;
+        header.children[1].alpha = 0.8;
+        
 
         parent.addControl(header);   
     }
@@ -3602,76 +3603,62 @@ var instructionScene = function(){
      
     var instruction = new BABYLON.GUI.TextBlock("Instruction",); 
     instruction.color = "Black";
-    instruction.fontFamily = "My Font";
-    instruction.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
-    instruction.fontSize = 45;
     instruction.top = "-10%";
-    //instruction.paddingLeft = "-32px";
-    //instruction.paddingRight = "32px";
     instruction.paddingTop = "-55px";
     instruction.paddingBottom = "55px";
+    instruction.fontFamily = "My Font";
+    instruction.fontSize = 45;
     instruction.resizeToFit = true;
     instruction.text = "Are you the fastest? \n Catch more carrots than the rabbit!";
+    instruction.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
 
     var instruction_image = new BABYLON.GUI.Image("instruction_image", "textures/menu/instructions.png");
     instruction_image.width = "30%";
     instruction_image.height = "40%";
-    instruction_image.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
     instruction_image.paddingTop = "5%";
     instruction_image.paddingBottom = "-5%";
-    //instruction_image.paddingRight = "35%";
-    //instruction_image.paddingLeft = "-35%";
-
-  //  guiInstruction.addControl(instruction_image);
+    instruction_image.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
 
 
-    var rect1 = new BABYLON.GUI.Rectangle();
-    rect1.width = "70%";
-    rect1.height = "70%";
-    //rect1.paddingLeft = "-32px";
-    //rect1.paddingRight = "2px";
-    rect1.paddingTop = "30px";
-    rect1.paddingBottom = "-30px";
-    rect1.background = "white";
-    rect1.alpha = 0.5;
+    var rectangle_instruction = new BABYLON.GUI.Rectangle();
+    rectangle_instruction.width = "70%";
+    rectangle_instruction.height = "70%";
+    rectangle_instruction.paddingTop = "30px";
+    rectangle_instruction.paddingBottom = "-30px";
+    rectangle_instruction.background = "white";
+    rectangle_instruction.alpha = 0.5;
 
 
-    const MenuBtn = BABYLON.GUI.Button.CreateSimpleButton("Menu", "Menu");
-    MenuBtn.width = 0.1;
-    MenuBtn.height = 0.07;
-    MenuBtn.fontFamily = "My Font";
-    //MenuBtn.height = "40px";
-    MenuBtn.color = "white";
-    MenuBtn.alpha = 0.8;
-    MenuBtn.fontSize = 30;
-    //MenuBtn.thickness = 1;
-    MenuBtn.background = "grey";
-
-    MenuBtn.top = "-120px";
-    MenuBtn.bottom = "120px"
-   // MenuBtn.right = "-13%";
-   // MenuBtn.left = "13%";
-    MenuBtn.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
-    //rect1.addControl(MenuBtn);
+    const menu_button = BABYLON.GUI.Button.CreateSimpleButton("Menu", "Menu");
+    menu_button.top = "-120px";
+    menu_button.bottom = "120px"
+    menu_button.width = 0.1;
+    menu_button.height = 0.07;
+    menu_button.fontFamily = "My Font";
+    menu_button.fontSize = 30;
+    menu_button.color = "white";
+    menu_button.background = "grey";
+    menu_button.alpha = 0.8;
+    menu_button.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
     
 
 
-    guiInstruction.addControl(rect1);
+    guiInstruction.addControl(rectangle_instruction);
     guiInstruction.addControl(instruction);
     guiInstruction.addControl(instruction_image);
-    guiInstruction.addControl(MenuBtn);
+    guiInstruction.addControl(menu_button);
 
-    MenuBtn.onPointerMoveObservable.add(function(){
-        MenuBtn.background = "orange";
-        MenuBtn.alpha = 0.8;
+    menu_button.onPointerMoveObservable.add(function(){
+        menu_button.background = "orange";
+        menu_button.alpha = 0.8;
     });
 
-	MenuBtn.onPointerOutObservable.add(function () {
-        MenuBtn.background = "grey";
-        MenuBtn.alpha = 0.8;
+	menu_button.onPointerOutObservable.add(function () {
+        menu_button.background = "grey";
+        menu_button.alpha = 0.8;
         });
 
-    MenuBtn.onPointerUpObservable.add(function () {
+    menu_button.onPointerUpObservable.add(function () {
  
         menu = menuScene(); 
         change_scene = 0;  
@@ -3702,14 +3689,12 @@ var finalScene = function (){
     var final_text = new BABYLON.GUI.TextBlock("final_text",); 
     final_text.color = "Black";
     final_text.fontFamily = "My Font";
-    final_text.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
-    final_text.textVerticalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
-    final_text.fontSize = "100px";
-    //final_text.paddingLeft = "-32px";
-    //final_text.paddingRight = "32px";
+    final_text.fontSize = "80px";
     final_text.paddingTop = "5px";
     final_text.paddingBottom = "-5px";
     final_text.resizeToFit = true;
+    final_text.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
+    final_text.textVerticalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
 
     if(bool_win){ 
         music = new BABYLON.Sound("Win", "sounds/congratulation.wav", scene, null, {
@@ -3723,59 +3708,54 @@ var finalScene = function (){
             autoplay: true,
             volume: 0.3
         });
-        final_text.text = "Ops... too slow!"}
+        final_text.text = "Ops... too slow!"
+    }
 
-    var rect1 = new BABYLON.GUI.Rectangle();
-    rect1.width = "70%";
-    rect1.height = "70%";
-    //rect1.paddingLeft = "-32px";
-    //rect1.paddingRight = "2px";
-    rect1.paddingTop = "30px";
-    rect1.paddingBottom = "-30px";
-    rect1.background = "white";
-    rect1.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
-    rect1.alpha = 0.5;
+    var rectangle = new BABYLON.GUI.Rectangle();
+    rectangle.width = "70%";
+    rectangle.height = "70%";
+    rectangle.paddingTop = "30px";
+    rectangle.paddingBottom = "-30px";
+    rectangle.background = "white";
+    rectangle.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
+    rectangle.alpha = 0.5;
 
-    const restartBtn = BABYLON.GUI.Button.CreateSimpleButton("restart_win", "Play Again");
-    restartBtn.width = "15%";
-    restartBtn.height = "10%";
-    restartBtn.fontFamily = "My Font";
-    //restartBtn.height = "40px";
-    restartBtn.color = "white";
-    restartBtn.top = "-110px";
-    restartBtn.fontSize = 30;
-    restartBtn.background = "grey";
-    restartBtn.alpha = 0.8;
-    restartBtn.right = "10%";
-	restartBtn.left = "-10%";
-    restartBtn.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
-    restartBtn.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
-    //rect1.addControl(restartBtn);
+    const restart_button = BABYLON.GUI.Button.CreateSimpleButton("restart", "Play Again");
+    restart_button.top = "-110px";
+    restart_button.right = "10%";
+	restart_button.left = "-10%";
+    restart_button.width = "15%";
+    restart_button.height = "10%";
+    restart_button.fontFamily = "My Font";
+    restart_button.fontSize = 30;
+    restart_button.color = "white";
+    restart_button.background = "grey";
+    restart_button.alpha = 0.8;
+    restart_button.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+    restart_button.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
     
 
-    const MenuBtn = BABYLON.GUI.Button.CreateSimpleButton("Menu", "Menu");
-    MenuBtn.width = "15%";
-    MenuBtn.height = "10%";
-    MenuBtn.fontFamily = "My Font";
-    //MenuBtn.height = "40px";
-    MenuBtn.color = "white";
-    MenuBtn.top = "-110px";
-    MenuBtn.fontSize = 30;
-    MenuBtn.background = "grey";
-    MenuBtn.alpha = 0.8;
-    MenuBtn.right = "-10%";
-	MenuBtn.left = "10%";
-    MenuBtn.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
-    MenuBtn.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
-    //rect1.addControl(MenuBtn);
+    const menu_button = BABYLON.GUI.Button.CreateSimpleButton("Menu", "Menu");
+    menu_button.top = "-110px";
+    menu_button.right = "-10%";
+	menu_button.left = "10%";
+    menu_button.width = "15%";
+    menu_button.height = "10%";
+    menu_button.fontFamily = "My Font";
+    menu_button.fontSize = 30;
+    menu_button.color = "white";
+    menu_button.background = "grey";
+    menu_button.alpha = 0.8;
+    menu_button.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+    menu_button.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
 
 
-    guiFinal.addControl(rect1);
-    guiFinal.addControl(restartBtn);
-    guiFinal.addControl(MenuBtn);
+    guiFinal.addControl(rectangle);
+    guiFinal.addControl(restart_button);
+    guiFinal.addControl(menu_button);
     guiFinal.addControl(final_text);
 
-    restartBtn.onPointerUpObservable.addOnce(function () {
+    restart_button.onPointerUpObservable.addOnce(function () {
         jump=0;
         feet_opening = 0;
         change_rabbit = false;
@@ -3807,17 +3787,17 @@ var finalScene = function (){
         from_final = 1;
     });
 
-    restartBtn.onPointerMoveObservable.add(function(){
-        restartBtn.background = "orange";
-        restartBtn.alpha = 0.8;
+    restart_button.onPointerMoveObservable.add(function(){
+        restart_button.background = "orange";
+        restart_button.alpha = 0.8;
     });
 
-    restartBtn.onPointerOutObservable.add(function () {
-        restartBtn.background = "grey";
-        restartBtn.alpha = 0.8;
+    restart_button.onPointerOutObservable.add(function () {
+        restart_button.background = "grey";
+        restart_button.alpha = 0.8;
     });
 
-    MenuBtn.onPointerUpObservable.addOnce(function () {
+    menu_button.onPointerUpObservable.addOnce(function () {
         jump=0;
         feet_opening = 0;
         change_rabbit = false;
@@ -3835,7 +3815,6 @@ var finalScene = function (){
         take_carrot7 = 0;
         take_carrot8 = 0;
         take_carrot9 = 0;
-        //console.log("clickedMenu");
 
         carrot_motion = 0;
         carrot_change = false;
@@ -3850,14 +3829,14 @@ var finalScene = function (){
         from_final = 1; 
     });
 
-    MenuBtn.onPointerMoveObservable.add(function(){
-        MenuBtn.background = "orange";
-        MenuBtn.alpha = 0.8;
+    menu_button.onPointerMoveObservable.add(function(){
+        menu_button.background = "orange";
+        menu_button.alpha = 0.8;
     });
 
-    MenuBtn.onPointerOutObservable.add(function () {
-        MenuBtn.background = "grey";
-        MenuBtn.alpha = 0.8;
+    menu_button.onPointerOutObservable.add(function () {
+        menu_button.background = "grey";
+        menu_button.alpha = 0.8;
     });
 
     return scene;
@@ -3884,22 +3863,17 @@ var LOADING_Scene = function(){
     var loadGui = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
 
     var Loading = new BABYLON.GUI.TextBlock("Loading","Loading... "); 
-    Loading.color = "white";
-    Loading.fontFamily = "My Font";
-    //Lose.textHorizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
-    Loading.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
-    Loading.fontSize = "74px";
     Loading.paddingLeft = "-32px";
     LoadingpaddingRight = "32px";
     Loading.paddingTop = "5px";
     Loading.paddingBottom = "-5px";
+    Loading.color = "white";
+    Loading.fontFamily = "My Font";
+    Loading.fontSize = "74px";
     Loading.resizeToFit = true;
+    Loading.textVerticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_CENTER;
 
-    //loadGui.addControl(rect1);
     loadGui.addControl(Loading);
-
-  
-
 
     return scene;
 }
