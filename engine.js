@@ -2889,9 +2889,10 @@ var gameScene = function () {
         rabbit_skeleton = skeletons[0];
     
         rabbit.parent = rabbitBox;
-       // rabbitBox.showBoundingBox = true;
+        rabbitBox.showBoundingBox = true;
     
         r_box = meshes[1];
+        //r_box.showBoundingBox = true
     
         rabbitBox.physicsImpostor = new BABYLON.PhysicsImpostor(rabbitBox, BABYLON.PhysicsImpostor.BoxImpostor, {mass: 40, restitution: 0});
         rabbitBox.physicsImpostor.physicsBody.inertia.setZero();
